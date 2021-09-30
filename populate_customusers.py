@@ -9,14 +9,19 @@ from faker import Faker
 fake = Faker()
 
 
-def username(num_of_name=10):
+def username(num_of_name=5):
+    
     for i in range(num_of_name):
-        faker_fname = fake.first_name()
-        faker_lname=fake.last_name()
-        faker_email = fake.ascii_free_email()
-        name= customUser.objects.create(firstName=faker_fname,lastName=faker_lname,email=faker_email)
-        name.save()
+        fake_fname = fake.first_name()
+        fake_lname=fake.last_name()
+        fake_email = fake.ascii_free_email()
+        user= customUser.objects.create(
+            firstName=fake_fname,
+            lastName=fake_lname,
+            email=fake_email)
+        user.save()
+       
         
 
 if __name__ == "__main__" :
-    username(20)
+    username(5)
