@@ -21,7 +21,9 @@ def username(num_of_name=5):
             email=fake_email)
         user.save()
        
-        
+def delete_songs():
+    customUser.objects.all().delete()
 
 if __name__ == "__main__" :
     username(5)
+    # delete_songs()

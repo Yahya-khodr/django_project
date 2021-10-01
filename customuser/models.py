@@ -11,3 +11,11 @@ class customUser(models.Model):
 
     def __str__(self) :
         return "{} {}" . format(self.firstName,self.lastName)
+
+    def serialize(self):
+        return {
+            "id" :self.id,
+            "firstName":self.firstName,
+            "lastName":self.lastName,
+            "email":self.email
+        }
