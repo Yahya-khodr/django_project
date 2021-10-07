@@ -24,26 +24,27 @@
                     <table id="myTable" class="display makedt" style="width:100%">
                         <thead class="bg-primary text-light m-0">
                             <tr>
-                            <th>First name</th>
-                            <th>Last name</th>
-                            <th>Email Adress</td>
-                            </tr>
-                        </thead>
-                        <tbody>
+                                <th>First name</th>
+                                <th>Last name</th>
+                                <th>Email Adress</td>
+                                    
+                                </tr>
+                            </thead>
+                            <tbody>
                                 {% for customUser in customUsers %}
-                                    <tr>
-                                        <td>{{ customUser.firstName }}</td>
-                                        <td>{{ customUser.lastName }}</td>
-                                        <td>{{ customUser.email }}</td>
-                                    </tr>
+                                <tr>
+                                    <td>{{ customUser.firstName }}</td>
+                                    <td>{{ customUser.lastName }}</td>
+                                    <td>{{ customUser.email }}</td>
+                                </tr>
                                 {% endfor %}
-                        </tbody>
-                    </table>
+                            </tbody>
+                        </table>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-
+        
 </body>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.11.3/js/jquery.dataTables.js"></script>
